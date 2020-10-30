@@ -1,10 +1,42 @@
-## Big O Notation
+<!-- vscode-markdown-toc -->
+* 1. [Big O Notation](#BigONotation)
+* 2. [Common Problem Solving Patterns](#CommonProblemSolvingPatterns)
+	* 2.1. [Frequency Counters](#FrequencyCounters)
+	* 2.2. [Multiple Pointers](#MultiplePointers)
+	* 2.3. [Sliding Window Pattern](#SlidingWindowPattern)
+	* 2.4. [Divide and Conquer](#DivideandConquer)
+* 3. [Binary Search Trees](#BinarySearchTrees)
+	* 3.1. [Introduction](#Introduction)
+	* 3.2. [Uses for Trees](#UsesforTrees)
+	* 3.3. [Intro to Binary Trees](#IntrotoBinaryTrees)
+	* 3.4. [Our Tree Classes](#OurTreeClasses)
+		* 3.4.1. [Inserting Logic](#InsertingLogic)
+		* 3.4.2. [Finding Logic](#FindingLogic)
+		* 3.4.3. [Big O of BST](#BigOofBST)
+* 4. [Tree Traversal](#TreeTraversal)
+	* 4.1. [Breadth First Search (BFS)](#BreadthFirstSearchBFS)
+	* 4.2. [Depth First Search (DFS)](#DepthFirstSearchDFS)
+	* 4.3. [When to Use BFS and DFS](#WhentoUseBFSandDFS)
+		* 4.3.1. [Different DFS types](#DifferentDFStypes)
+* 5. [Heaps](#Heaps)
+	* 5.1. [Storing Heaps](#StoringHeaps)
+	* 5.2. [Heap: Insert into](#Heap:Insertinto)
+
+<!-- vscode-markdown-toc-config
+	numbering=true
+	autoSave=true
+	/vscode-markdown-toc-config -->
+<!-- /vscode-markdown-toc --># Data Structures and Algorithms
+
+
+
+##  1. <a name='BigONotation'></a>Big O Notation
 
 ![](./images/14.png)
 
-## Common Problem Solving Patterns
+##  2. <a name='CommonProblemSolvingPatterns'></a>Common Problem Solving Patterns
 
-### Frequency Counters
+###  2.1. <a name='FrequencyCounters'></a>Frequency Counters
 
 - Time Complexity O(n)
 - This pattern uses objects or sets to collect values/frequencies of values
@@ -22,7 +54,7 @@
 
 ![](./images/36.png)
 
-### Multiple Pointers
+###  2.2. <a name='MultiplePointers'></a>Multiple Pointers
 
 - Idea around strategy
 
@@ -41,7 +73,7 @@ sum([-4, -3, -2, -1. 0, 1, 2, 5])`
     - -2 + 2 = 0 DONE
 ```
 
-### Sliding Window Pattern
+###  2.3. <a name='SlidingWindowPattern'></a>Sliding Window Pattern
 
 - Idea around strategy
 
@@ -69,7 +101,7 @@ maxSubarraySum([2,6,9,2,1,8,5,6,3], 3)
 - Then subtract 8 and add 3
 ```
 
-### Divide and Conquer
+###  2.4. <a name='DivideandConquer'></a>Divide and Conquer
 
 - Idea behind pattern
 
@@ -93,9 +125,9 @@ maxSubarraySum([2,6,9,2,1,8,5,6,3], 3)
 ```
 
 
-## Binary Search Trees
+##  3. <a name='BinarySearchTrees'></a>Binary Search Trees
 
-### Introduction
+###  3.1. <a name='Introduction'></a>Introduction
 
 - What is a tree?
     - A data structure that consists of nodes in a *parent/child* relationship
@@ -131,7 +163,7 @@ maxSubarraySum([2,6,9,2,1,8,5,6,3], 3)
 - `Leaf` - A node with no children
 - `Edge` The connection between one node and another
 
-### Uses for Trees
+###  3.2. <a name='UsesforTrees'></a>Uses for Trees
 
 - HTML DOM is a tree
 - Network Routing
@@ -152,7 +184,7 @@ maxSubarraySum([2,6,9,2,1,8,5,6,3], 3)
 - JSON
     - The parsing, for example, traverses the tree and turns it into an object
 
-### Intro to Binary Trees
+###  3.3. <a name='IntrotoBinaryTrees'></a>Intro to Binary Trees
 
 - We'll be focusing on Binary Trees and Binary Search Trees (BST)
 - BST makes searching for data easily
@@ -178,22 +210,22 @@ maxSubarraySum([2,6,9,2,1,8,5,6,3], 3)
 
 ![](./images/9.png)
 
-### Our Tree Classes
+###  3.4. <a name='OurTreeClasses'></a>Our Tree Classes
 
 - Refer to binary-search-tree/index.js for code
 - Steps for creating a new node in a tree
 
-#### Inserting Logic
+####  3.4.1. <a name='InsertingLogic'></a>Inserting Logic
 
 ![](./images/10.png)
 
-#### Finding Logic
+####  3.4.2. <a name='FindingLogic'></a>Finding Logic
 
 ![](./images/11.png)
 
 - Thing to note here, you can cut (usually) the tree in half every time you go left or right when traversing it
 
-#### Big O of BST
+####  3.4.3. <a name='BigOofBST'></a>Big O of BST
 
 - Inserting - `O(log n)`
     - Best and average
@@ -219,7 +251,7 @@ maxSubarraySum([2,6,9,2,1,8,5,6,3], 3)
 
 ![](./images/15.png)
 
-## Tree Traversal
+##  4. <a name='TreeTraversal'></a>Tree Traversal
 
 - How to visit every node 1 time?
 - Two different approaches
@@ -244,7 +276,7 @@ maxSubarraySum([2,6,9,2,1,8,5,6,3], 3)
 
 ![](./images/19.png)
 
-### Breadth First Search (BFS)
+###  4.1. <a name='BreadthFirstSearchBFS'></a>Breadth First Search (BFS)
 
 - Visit every node on the same level before we move on
 
@@ -252,7 +284,7 @@ maxSubarraySum([2,6,9,2,1,8,5,6,3], 3)
 
 ![](./images/20.png)
 
-### Depth First Search (DFS)
+###  4.2. <a name='DepthFirstSearchDFS'></a>Depth First Search (DFS)
 
 **PreOrder**
 
@@ -282,19 +314,19 @@ maxSubarraySum([2,6,9,2,1,8,5,6,3], 3)
 ![](./images/25.png)
 ![](./images/26.png)
 
-### When to Use BFS and DFS
+###  4.3. <a name='WhentoUseBFSandDFS'></a>When to Use BFS and DFS
 
 - Depends on the tree
 - Space used up can be a lot more in BFS for a wide tree
 - With DFS, it would use less space for a tree that is wider than it is deep
 
-#### Different DFS types
+####  4.3.1. <a name='DifferentDFStypes'></a>Different DFS types
 
 - `InOrder` gets you sorted data back for a binary search tree
     - You can get set of all nodes in order
 - `PreOrder` can be used to `export` a tree structure so that it is easy reconstructed or copied
 
-## Heaps
+##  5. <a name='Heaps'></a>Heaps
 
 - A special type of `tree`
 - Very similar to a binary search tree
@@ -317,7 +349,7 @@ maxSubarraySum([2,6,9,2,1,8,5,6,3], 3)
 - Binary Heaps are used to implement Priority Queues which are very commonly used
 - Used with `graph traversal` algorithms
 
-### Storing Heaps
+###  5.1. <a name='StoringHeaps'></a>Storing Heaps
 
 ![](./images/28.png)
 
@@ -331,7 +363,7 @@ maxSubarraySum([2,6,9,2,1,8,5,6,3], 3)
 
 ![](./images/31.png)
 
-### Heap: Insert into
+###  5.2. <a name='Heap:Insertinto'></a>Heap: Insert into
 
 ![](./images/32.png)
 
